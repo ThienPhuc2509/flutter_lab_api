@@ -90,7 +90,7 @@ class OrderController {
     let sentOrderMessage = `Đơn hàng ${orderId} đã được giao đến cho ${order.username}`;
     setTimeout(() => {
       pushNotificationService.SendNotificationToDevice(
-        ["4e5021c6-1f7d-4373-8292-4b4500895d3e"],
+        [""],
         sendingOrderMessage,
         checkout.username,
         (error, results) => {
@@ -103,7 +103,7 @@ class OrderController {
     }, 5000);
     setTimeout(() => {
       pushNotificationService.SendNotificationToDevice(
-        ["4e5021c6-1f7d-4373-8292-4b4500895d3e"],
+        [""],
         sentOrderMessage,
         checkout.username,
         (error, results) => {
